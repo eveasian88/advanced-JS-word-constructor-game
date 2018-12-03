@@ -21,10 +21,10 @@ startGame();
  *          functions - pick a word from the array at random; 
  *      B. start game
  * 
- * 2. game loop
+ * 2. game loop:
  *      A. prompt user for a letter
  *      B. check letter against Word object
- *      C. inform user of success or lack of
+ *      C. inform user of success or lack of success
  * 
  * 
  * startGame -> promptUser -> ? -> 
@@ -34,7 +34,7 @@ startGame();
 //'chosenWord' is used for comparison later to check if the word is solved
 function startGame() {
 
-    //NOTE: perhaps abstract into a reusable function
+    //NOTE: perhaps abstract into a reusable function [tutor notes]
     if (wordList.length<2) {
         wordList = ["appreciate", "believe", "blessed", "amazing", "love", "safe", "admire", "trust", "thoughful", "giving", "thanks", "supportive", "proud", "helpful", "smart", "wonderful", "compassionate", "happiness", "joy", "gratitude", "sweet", "kind", "attention", "time", "admiration", "courageous", "empathy", "encouragement", "radiant", "respect"];
     }
@@ -89,7 +89,7 @@ function promptUser() {
 
 // checks that the user's input is in correct format and compares the letter to gameWord to see if guess is correct
 function checkAnswer(data) {
-    console.log("CHECK ANSWER :: ", data)
+    // console.log("CHECK ANSWER :: ", data)
 
     if ((data.letter.length === 1) && /^[a-zA-Z]+$/.test(data.letter)) {
         var checkable = data.letter.toUpperCase();

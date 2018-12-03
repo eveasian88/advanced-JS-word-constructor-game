@@ -19,7 +19,7 @@ function Word(wordArr) {
         return wordDisplay.join(" ");
     }
     this.checkGuess = function(myGuess) {
-        console.log('WORD CHECK GUESS :: ', myGuess)
+        // console.log("WORD CHECK GUESS :: ", myGuess)
         for (var i=0; i<this.testWord.length; i++) {
             this.testWord[i].check(myGuess);
         }
