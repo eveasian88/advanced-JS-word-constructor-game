@@ -1,0 +1,23 @@
+{
+  "name": "advanced-js-word-constructor-game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eveasian88/advanced-JS-word-constructor-game.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eveasian88/advanced-JS-word-constructor-game/issues"
+  },
+  "homepage": "https://github.com/eveasian88/advanced-JS-word-constructor-game#readme",
+  "dependencies": {
+    "inquirer": "^6.2.1"
+  }
+}

@@ -1,7 +1,7 @@
 // letter constructor will display an underscore or letter or blank (if the word to be guessed has a space)
 //'check' function changes boolean so the letter will display if it's guessed
 function Letter(alpha) {
-    this.alpha = alpha;
+    this.alpha = alpha.toUpperCase();
     this.guessed = false;
     this.displayLet = function() {
         if (this.alpha === " ") {
@@ -14,7 +14,9 @@ function Letter(alpha) {
             return this.alpha;
         }
     }
-    this.check = function(userGuess) {
+    this.check = function (userGuess) {
+        // console.log("LETTER CHECK :: ", userGuess)
+        // console.log("LETTER ALPHA :: ", this.alpha)
         if (userGuess === this.alpha) {
             this.guessed = true;
         }

@@ -1,14 +1,15 @@
 // word constructor uses letter.js to create inputted word using 'makeWord'
-var Letter = require("./letter.js");
+var Letter = require("./Letter.js");
 
 function Word(wordArr) {
     this.wordArr = wordArr;
     this.testWord = [];
     this.makeWord = function() {
-        for (var i=0; i<wordArr.length; i++) {
-            var let = new Letter(wordArr[i]);
-            this.testWord.push(let);
+        for (var i=0; i < this.wordArr.length; i++) {
+            var letter = new Letter(wordArr[i]);
+            this.testWord.push(letter);
         }
+        // console.log("WORD :: Letter array  :: ", this.testWord)
     }
     this.showWord = function() {
         var wordDisplay = [];
@@ -18,9 +19,14 @@ function Word(wordArr) {
         return wordDisplay.join(" ");
     }
     this.checkGuess = function(myGuess) {
+        console.log('WORD CHECK GUESS :: ', myGuess)
         for (var i=0; i<this.testWord.length; i++) {
             this.testWord[i].check(myGuess);
         }
+    }
+    this.isSolved = function () {
+        var currentWordState = this.showWord();
+        return !currentWordState.includes("_")
     }
 }
 
