@@ -1,6 +1,6 @@
 # advanced-JS-word-constructor-game
 
-This is a Node.js CLI word guessing game built using JavaScript object constructor/classes.
+This is a Node.js Command Line Interface (CLI) Word Guessing Game built using JavaScript object constructor and classes.
 
 ## The game starts with a random word selected from the word bank.
 
