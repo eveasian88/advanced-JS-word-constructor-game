@@ -1,5 +1,5 @@
 // letter constructor will display an underscore or letter or blank (if the word to be guessed has a space)
-//'check' function changes boolean so the letter will display if it's guessed
+//"check" function changes boolean so the letter will display if it's guessed
 function Letter(alpha) {
     this.alpha = alpha.toUpperCase();
     this.guessed = false;

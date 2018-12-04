@@ -12,29 +12,11 @@ const MAX_GUESSES = 8;
 
 startGame();
 
-/**
- * 1. game setup:
- *      A. populate variables
- *          - pick random word
- *          - pass word through constructors
- *          - set guessesAvailable at 7
- *          functions - pick a word from the array at random; 
- *      B. start game
- * 
- * 2. game loop:
- *      A. prompt user for a letter
- *      B. check letter against Word object
- *      C. inform user of success or lack of success
- * 
- * 
- * startGame -> promptUser -> ? -> 
- */
 
-// chooses a word from the word array, uses the word constructor to create the proper display and functionality;
-//'chosenWord' is used for comparison later to check if the word is solved
+// chooses a word from the word array, uses the Word constructor to create the display and functionality;
+//"chosenWord" is used for comparison later to check if the word is solved
 function startGame() {
 
-    //NOTE: perhaps abstract into a reusable function 
     if (wordList.length<2) {
         wordList = ["appreciate", "believe", "blessed", "amazing", "love", "safe", "admire", "trust", "thoughful", "giving", "thanks", "supportive", "proud", "helpful", "smart", "wonderful", "compassionate", "happiness", "joy", "gratitude", "sweet", "kind", "attention", "time", "admiration", "courageous", "empathy", "encouragement", "radiant", "respect"];
     }
@@ -63,7 +45,6 @@ function promptUser() {
     if (gameWord.isSolved() ) {
         console.log('You Win!');
         console.log(gameWord.showWord());
-        // change line below to handle restart or something ** right now it leaves the last letter unfilled in but it says "you win!"
         process.exit()
 
     } else if (counter <= MAX_GUESSES) {

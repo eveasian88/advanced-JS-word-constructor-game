@@ -1,4 +1,4 @@
-// word constructor uses letter.js to create inputted word using 'makeWord'
+// word constructor uses letter.js to create inputted word using "makeWord"
 var Letter = require("./Letter.js");
 
 function Word(wordArr) {
