@@ -34,7 +34,7 @@ startGame();
 //'chosenWord' is used for comparison later to check if the word is solved
 function startGame() {
 
-    //NOTE: perhaps abstract into a reusable function [tutor notes]
+    //NOTE: perhaps abstract into a reusable function 
     if (wordList.length<2) {
         wordList = ["appreciate", "believe", "blessed", "amazing", "love", "safe", "admire", "trust", "thoughful", "giving", "thanks", "supportive", "proud", "helpful", "smart", "wonderful", "compassionate", "happiness", "joy", "gratitude", "sweet", "kind", "attention", "time", "admiration", "courageous", "empathy", "encouragement", "radiant", "respect"];
     }
@@ -58,13 +58,15 @@ function startGame() {
  * process the users guess to determine validity
  * inform user if wrong or right
  */
+
 function promptUser() {
-    if ( gameWord.isSolved() ) {
+    if (gameWord.isSolved() ) {
         console.log('You Win!');
-        // change line below to handle restart or something
+        console.log(gameWord.showWord());
+        // change line below to handle restart or something ** right now it leaves the last letter unfilled in but it says "you win!"
         process.exit()
 
-    } else if (counter < MAX_GUESSES) {
+    } else if (counter <= MAX_GUESSES) {
         console.log(gameWord.showWord());
         inquirer.prompt([
             {
@@ -89,7 +91,7 @@ function promptUser() {
 
 // checks that the user's input is in correct format and compares the letter to gameWord to see if guess is correct
 function checkAnswer(data) {
-    // console.log("CHECK ANSWER :: ", data)
+    console.log("CHECK ANSWER :: ", data)
 
     if ((data.letter.length === 1) && /^[a-zA-Z]+$/.test(data.letter)) {
         var checkable = data.letter.toUpperCase();
@@ -114,7 +116,7 @@ function checkAnswer(data) {
 }
 
 // if the user's guess is correct, the word array displays the word with the guessed letter(s), 
-// if the entire word is correct (filled in), the game restarts.
+// if the entire word is filled in, the game restarts
 function rightGuess() {
     console.log("\nYou guessed correctly.\n");
     if (chosenWord.replace(/ /g,"") == (gameWord.showWord()).replace(/ /g,"")) {
