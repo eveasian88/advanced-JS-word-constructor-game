@@ -15,8 +15,8 @@ function Letter(alpha) {
         }
     }
     this.check = function (userGuess) {
-        console.log("LETTER CHECK :: ", userGuess)
-        console.log("LETTER ALPHA :: ", this.alpha)
+        // console.log("LETTER CHECK :: ", userGuess)
+        // console.log("LETTER ALPHA :: ", this.alpha)
         if (userGuess === this.alpha) {
             this.guessed = true;
         }

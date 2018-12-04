@@ -2,7 +2,8 @@
 var Word = require("./Word.js");
 var inquirer = require("inquirer");
 
-wordList = ["appreciate", "believe", "blessed", "amazing", "love", "safe", "admire", "trust", "thoughful", "giving", "thanks", "supportive", "proud", "helpful", "smart", "wonderful", "compassionate", "happiness", "joy", "gratitude", "sweet", "kind", "attention", "time", "admiration", "courageous", "empathy", "encouragement", "radiant", "respect"];
+wordList = ["i appreciate you", "i believe in you", "you are smart", "you are beautiful"];
+// "appreciate", "believe", "blessed", "amazing", "love", "safe", "admire", "trust", "thoughful", "giving", "thanks", "supportive", "proud", "helpful", "smart", "wonderful", "compassionate", "happiness", "joy", "gratitude", "sweet", "kind", "attention", "time", "admiration", "courageous", "empathy", "encouragement", "radiant", "respect"
 var select = 0;
 var chosenWord = "";
 var gameWord = "";
@@ -18,8 +19,9 @@ startGame();
 function startGame() {
 
     if (wordList.length<2) {
-        wordList = ["appreciate", "believe", "blessed", "amazing", "love", "safe", "admire", "trust", "thoughful", "giving", "thanks", "supportive", "proud", "helpful", "smart", "wonderful", "compassionate", "happiness", "joy", "gratitude", "sweet", "kind", "attention", "time", "admiration", "courageous", "empathy", "encouragement", "radiant", "respect"];
+        wordList = ["i appreciate you", "i believe in you", "you are smart", "you are beautiful"];
     }
+    // "blessed", "amazing", "love", "safe", "admire", "trust", "thoughful", "giving", "thanks", "supportive", "proud", "helpful", "smart", "wonderful", "compassionate", "happiness", "joy", "gratitude", "sweet", "kind", "attention", "time", "admiration", "courageous", "empathy", "encouragement", "radiant", "respect"
     select = Math.floor(Math.random()*wordList.length);
     chosenWord = wordList[select];
     gameWord = new Word(chosenWord);
@@ -31,16 +33,8 @@ function startGame() {
     promptUser();
 }
 
-// allows the user to input a letter guess, restarts the game if player is out of wrong guesses.
 
-/**
- * checking amount of guesses available
- *  -> restart game
- * ask user for a guess
- * process the users guess to determine validity
- * inform user if wrong or right
- */
-
+// allows the user to input a letter guess, restarts the game if player is out of wrong guesses
 function promptUser() {
     if (gameWord.isSolved() ) {
         console.log('You Win!');
@@ -72,7 +66,7 @@ function promptUser() {
 
 // checks that the user's input is in correct format and compares the letter to gameWord to see if guess is correct
 function checkAnswer(data) {
-    console.log("CHECK ANSWER :: ", data)
+    // console.log("CHECK ANSWER :: ", data)
 
     if ((data.letter.length === 1) && /^[a-zA-Z]+$/.test(data.letter)) {
         var checkable = data.letter.toUpperCase();
