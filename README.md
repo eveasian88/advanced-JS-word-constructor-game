@@ -1,27 +1,29 @@
 # advanced-JS-word-constructor-game
 
-##This is a Node.js CLI word guessing game built using JavaScript object constructor/classes.
+This is a Node.js CLI word guessing game built using JavaScript object constructor/classes.
 
-The game starts with a random word selected from the word bank.
+## The game starts with a random word selected from the word bank.
 
-• The word is displayed with an underscore representing each letter
+- the word is displayed with an underscore representing each letter
 
-The player is prompted for a number of eight guesses
+## The player is prompted for a number of eight guesses
 
-• If the player guesses correctly, the letter is revealed
-• If the player guesses incorrectly, the failed attemps will be reduced by one
-• The player can only guess a letter once
+- if the player guesses correctly, the letter is revealed
+- if the player guesses incorrectly, failed attemps is reduced by one
+- the player can only guess a letter once
 
-When the player failed attempts reaches zero
+## When the player failed attempts reaches zero
 
-• the game is over 
-• the player gets a new word to guess
+- the game is over and
+- the player gets a new word to guess
 
-When the player guesses the word correctly
+## When the player guesses the word correctly
 
-• the player wins 
+- the player wins 
+- the answer is displayed
+- the player can choose to guess a new word
 
-##See Demo Here
+## See Demo Here
 
 ![CLI word Game](images/Cli-Game.gif "CLI Word Game")
 
