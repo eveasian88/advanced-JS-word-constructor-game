@@ -2,8 +2,8 @@
 var Word = require("./Word.js");
 var inquirer = require("inquirer");
 
-wordList = ["i appreciate you", "i believe in you", "you are smart", "you are beautiful"];
-// "appreciate", "believe", "blessed", "amazing", "love", "safe", "admire", "trust", "thoughful", "giving", "thanks", "supportive", "proud", "helpful", "smart", "wonderful", "compassionate", "happiness", "joy", "gratitude", "sweet", "kind", "attention", "time", "admiration", "courageous", "empathy", "encouragement", "radiant", "respect"
+wordList = ["i appreciate you", "i believe in you", "you are smart", "you are beautiful", "i feel safe with you", "i admire you", "i trust you", "you are a giving person", "thank you for being supportive", "i am proud of you", "you have a kind heart", "you are courageous", "you are radiant", "i respect you"];
+
 var select = 0;
 var chosenWord = "";
 var gameWord = "";
@@ -13,15 +13,14 @@ const MAX_GUESSES = 8;
 
 startGame();
 
-
 // chooses a word from the word array, uses the Word constructor to create the display and functionality;
 //"chosenWord" is used for comparison later to check if the word is solved
 function startGame() {
 
     if (wordList.length<2) {
-        wordList = ["i appreciate you", "i believe in you", "you are smart", "you are beautiful"];
+        wordList = ["i appreciate you", "i believe in you", "you are smart", "you are beautiful", "i feel safe with you", "i admire you", "i trust you", "you are a giving person", "thank you for being supportive", "i am proud of you", "you have a kind heart", "you are courageous", "you are radiant", "i respect you"];
     }
-    // "blessed", "amazing", "love", "safe", "admire", "trust", "thoughful", "giving", "thanks", "supportive", "proud", "helpful", "smart", "wonderful", "compassionate", "happiness", "joy", "gratitude", "sweet", "kind", "attention", "time", "admiration", "courageous", "empathy", "encouragement", "radiant", "respect"
+    
     select = Math.floor(Math.random()*wordList.length);
     chosenWord = wordList[select];
     gameWord = new Word(chosenWord);
@@ -32,7 +31,6 @@ function startGame() {
     console.log("\nYou get 8 letter guesses to find the 'Word of Affirmation'.\n")
     promptUser();
 }
-
 
 // allows the user to input a letter guess, restarts the game if player is out of wrong guesses
 function promptUser() {
