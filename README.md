@@ -11,6 +11,7 @@ This is a Node.js Command Line Interface (CLI) Word Guessing Game built using Ja
 - if the player guesses correctly, the letter is revealed
 - if the player guesses incorrectly, failed attemps is reduced by one
 - the player can only guess a letter once
+- the player can only input one letter at a time
 
 ## When the player failed attempts reaches zero
 
@@ -25,6 +26,6 @@ This is a Node.js Command Line Interface (CLI) Word Guessing Game built using Ja
 
 ## See Demo Here
 
-![CLI word Game](images/Cli-Game.gif "CLI Word Game")
+![CLI word Game](images/cli-word-game.mp4 "CLI Word Game")
 
 
