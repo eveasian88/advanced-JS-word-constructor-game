@@ -1,4 +1,4 @@
-// npm modules to obtain player input of letter guesses and to add color to the display
+// npm modules to obtain player input of letter guesses
 var Word = require("./Word.js");
 var inquirer = require("inquirer");
 
