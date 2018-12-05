@@ -26,6 +26,6 @@ This is a Node.js Command Line Interface (CLI) Word Guessing Game built using Ja
 
 ## See Demo Here
 
-![CLI word Game](images/cli-word-game.mp4 "CLI Word Game")
+![CLI word Game](images/cli-word-game.gif "CLI Word Game")
 
 
