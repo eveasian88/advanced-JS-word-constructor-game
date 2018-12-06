@@ -29,7 +29,7 @@ This is a Node.js Command Line Interface (CLI) Word Guessing Game built using Ja
 - the player can choose to guess a new word
 
 
-## See Demo Here
+### See Demo Here
 
 ![CLI word Game](images/cli-word-game.gif "CLI Word Game")
 
