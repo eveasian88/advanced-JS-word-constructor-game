@@ -34,3 +34,10 @@ This is a Node.js Command Line Interface (CLI) Word Guessing Game built using Ja
 ![CLI word Game](images/cli-word-game.gif "CLI Word Game")
 
 
+#Technologies Utilized
+
+- JavaScript
+- Node.js
+- Inquire NPM Package 
+
+
