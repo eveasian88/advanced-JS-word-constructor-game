@@ -38,6 +38,9 @@ This is a Node.js Command Line Interface (CLI) Word Guessing Game built using Ja
 
 - JavaScript
 - Node.js
-- Inquire NPM Package 
+- Inquirer 
 
 
+## Author
+
+- Susye Weng-Reeder - *JavaScript/ Node.js/ Inquirer* - [Susye Weng-Reeder](https://eveasian88.github.io/Professional-Portfolio/ "Susye's Portfolio")
